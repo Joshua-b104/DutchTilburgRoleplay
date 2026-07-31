@@ -195,26 +195,4 @@ async function assignRoleSafely(member, role) {
     } catch (error) {
         logger.warn(`Failed to assign role ${role.id} to member ${member.id}:`, error);
     }
-}const channel = member.guild.channels.cache.get('1525489618579886210');
-
-if (!channel) {
-    console.log('Welcome channel not found');
-    return;
 }
-
-await channel.send({
-    content: `${member}`,
-    embeds: [
-        {
-            title: "Welcome!",
-            description: "__Welcome in Dutch Tilburg Roleplay!__ <:Tilburg_Roleplay:1525479941527834764>\n\n" +
-            "> Before u start, please take a moment to read the server *__[Rules](https://discord.com/channels/1525470270960177304/1526975597325062244)__* and familiarize yourself with the available channels.\n\n" +
-            "> If u have any questions, don't hesitate and create a *__[Ticket](https://discord.com/channels/1525470270960177304/1525945741405589514)__*.\n\n" +
-            "• __Have fun, enjoy your stay, and hopefully we'll see u in our Game!__",
-            color: 16763144,
-            image: {
-                url: "https://cdn.discordapp.com/attachments/1525613453090357348/1528203706070335538/Welkom_Banner.png"
-            }
-        }
-    ]
-});
