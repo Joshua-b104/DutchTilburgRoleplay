@@ -649,22 +649,3 @@ export function getRandomColor() {
 }
 
 export default botConfig;
-client.on('guildMemberAdd', async (member) => {
-    const channel = member.guild.channels.cache.get('1525489618579886210');
-
-    if (!channel) return;
-
-    await channel.send({
-        content: `${member}`,
-        embeds: [
-            {
-                title: "Welcome!",
-                description: "__Welcome in Dutch Tilburg Roleplay!__ <:Tilburg_Roleplay:1525479941527834764>\n\n> Before u start, please take a moment to read the server *__[Rules](https://discord.com/channels/1525470270960177304/1526975597325062244)__* and familiarize yourself with the available channels. Respect all players, follow instructions from Staff Members, and help us to grow a fun and big community!\n\n> If u have any questions, don't hesitate and create a *__[Ticket](https://discord.com/channels/1525470270960177304/1525945741405589514)__*.\n\n• __Have fun, enjoy your stay, and hopefully we'll see u in our Game!__",
-                color: 16763144,
-                image: {
-                    url: "https://cdn.discordapp.com/attachments/1525613453090357348/1528203706070335538/Welkom_Banner.png"
-                }
-            }
-        ]
-    });
-});
